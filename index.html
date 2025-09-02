@@ -81,16 +81,16 @@
   </div>
 
   <script>
-    const fixedPassword = "Voice@cloning1214";
+    const FIXED_PASSWORD = "Voice@cloning1214";
 
     function login() {
       const email = document.getElementById("email").value.trim();
       const password = document.getElementById("password").value.trim();
       const errorDiv = document.getElementById("error");
 
-      // ✅ Any valid email, fixed password only
-      if (email && password === fixedPassword) {
-        window.location.href = "main.html"; 
+      // Allow any valid email but fixed password
+      if (email && password === FIXED_PASSWORD) {
+        window.location.href = "main.html"; // ✅ Go to landing page
       } else {
         errorDiv.textContent = "Invalid email or password.";
       }
