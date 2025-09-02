@@ -81,16 +81,14 @@
   </div>
 
   <script>
-    const users = {
-      "mujahidnajfi@gmail.com": "Mujahid@1214"
-    };
+    const fixedPassword = "Voice@cloning1214";
 
     function login() {
       const email = document.getElementById("email").value.trim();
       const password = document.getElementById("password").value.trim();
       const errorDiv = document.getElementById("error");
 
-      if (users[email] && users[email] === password) {
+      if (email && password === fixedPassword) {
         window.location.href = "main.html"; // ✅ Go to landing page
       } else {
         errorDiv.textContent = "Invalid email or password.";
