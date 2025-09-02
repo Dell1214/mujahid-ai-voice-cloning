@@ -88,8 +88,9 @@
       const password = document.getElementById("password").value.trim();
       const errorDiv = document.getElementById("error");
 
+      // ✅ Any valid email, fixed password only
       if (email && password === fixedPassword) {
-        window.location.href = "main.html"; // ✅ Go to landing page
+        window.location.href = "main.html"; 
       } else {
         errorDiv.textContent = "Invalid email or password.";
       }
